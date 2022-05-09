@@ -5,6 +5,7 @@
 <div><canvas id="myChart" width="400" height="400"></canvas></div>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
+    Chart.defaults.elements.point.pointStyle=<img src="\images\eapple.png">
     const labels = [
       'January',
       'February',
@@ -15,20 +16,41 @@
     ];
   
     const data = {
-      labels: labels,
-      datasets: [{
-        label: 'My First dataset',
-        backgroundColor: 'rgb(255, 99, 132)',
-        borderColor: 'rgb(255, 99, 132)',
-        data: [0, 10, 5, 2, 20, 30, 45],
-      }]
-    };
+  datasets: [{
+    label: 'Odmiany jabłek',
+    data: [{
+      x: -10,
+      y: 0
+    }, {
+      x: 0,
+      y: 10
+    }, {
+      x: 10,
+      y: 5
+    }, {
+      x: 0.5,
+      y: 5.5
+    }],
+    backgroundColor: 'rgb(255, 99, 132)'
+  }],
+};
   
     const config = {
-      type: 'line',
+      type: 'scatter',
       data: data,
-      options: {}
-    };
+      options: {
+    scales: {
+        y: {
+        title: {
+          color: 'blue',
+          display: true,
+          text: 'Kwaśne ------ Słodkie'}}
+      x: {
+        title: {
+          color: 'red',
+          display: true,
+          text: 'Miękkie ------ Chrupkie'}
+    }}}};
   </script>
 <script>
     const myChart = new Chart(
