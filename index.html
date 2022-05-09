@@ -3,7 +3,7 @@
     <head>
         <style>
 h1 {
-  color:red;
+  color:yellow;
 }
 div{
     max-width: 80%;
@@ -113,24 +113,26 @@ div{
       options: {
     scales: {
       x: {
+          
+        min: -5,
+          max: 5,
         title: {
           color: 'red',
           display: true,
           text: 'Miękkie ------ Chrupkie'},
-          ticks: {
-          min: -5,
-          max: 5,
-        },},
+           
+          
+    },},
           y: {
+        
+            min: -5,
+          max: 5,
         title: {
           color: 'blue',
           display: true,
           text: 'Kwaśne ------ Słodkie'},
-          ticks: {
-            min: -5,
-          max: 5,
-        }}
-}}};
+          }
+}};
   </script>
 
 <script>
