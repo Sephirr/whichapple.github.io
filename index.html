@@ -6,8 +6,8 @@ h1 {
   color:brown;
 }
 div{
-    max-width: 50%;
-    max-height: 50%;
+    max-width: 80%;
+    max-height: 45%;
 }
 
 
@@ -47,62 +47,62 @@ div{
   datasets: [{
     label: 'Scatter Dataset',
     data: [{
-      x: 4,
-      y: 6
+      x: -1,
+      y: 1
     }, {
-      x: 2,
-      y: 7
-    }, {
-      x: 5.5,
-      y: 7.5
-    }, {
-      x: 8,
+      x: -3,
       y: 2
-    },{
-      x: 7,
-      y: 4
     }, {
-      x: 9,
+      x: 0.5,
       y: 2.5
     }, {
       x: 3,
-      y: 5
-    }, {
-      x: 3,
-      y: 9
+      y: -3
+    },{
+      x: 2,
+      y: -1
     }, {
       x: 4,
-      y: 3
+      y: -2.5
     }, {
-      x: 5.5,
-      y: 6
-    },{
-      x: 7,
-      y: 7
+      x: -2,
+      y: 0
     }, {
-      x: 7,
-      y: 4.5
-    }, {
-      x: 6,
-      y: 6
-    }, {
-      x: 7,
-      y: 4
-    },{
-      x: 5.5,
-      y: 6
-    }, {
-      x: 7,
+      x: -2,
       y: 4
     }, {
-      x: 4,
-      y: 4.5
+      x: -1,
+      y: -2
     }, {
-      x: 7,
-      y: 3
+      x: 0.5,
+      y: 1
+    },{
+      x: 2,
+      y: 2
     }, {
-      x: 5,
-      y: 2.5}],
+      x: 2,
+      y: -0.5
+    }, {
+      x: 1,
+      y: 1
+    }, {
+      x: 2,
+      y: -1
+    },{
+      x: 0.5,
+      y: 1
+    }, {
+      x: 2,
+      y: -1
+    }, {
+      x: -1,
+      y: -0.5
+    }, {
+      x: 2,
+      y: -2
+    }, {
+      x: 0,
+      y: -2.5}],
     backgroundColor: 'rgb(255, 99, 132)'
   }],
 };
@@ -116,12 +116,20 @@ div{
         title: {
           color: 'red',
           display: true,
-          text: 'Miękkie ------ Chrupkie'}},
+          text: 'Miękkie ------ Chrupkie'},
+          ticks: {
+          min: -5,
+          max: 5,
+        },},
           y: {
         title: {
           color: 'blue',
           display: true,
-          text: 'Kwaśne ------ Słodkie'}}
+          text: 'Kwaśne ------ Słodkie'},
+          ticks: {
+          min: -5,
+          max: 5,
+        }}
 }}};
   </script>
 
