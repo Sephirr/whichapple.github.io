@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html>
 <body>
-<h1 color="red">FUK U</h1>
+<h1>FUK U</h1>
 <div><canvas id="myChart" width="400" height="400"></canvas></div>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
-    Chart.defaults.elements.point.pointStyle=<img src="\images\eapple.png">
+    const img1 = new Image();
+    img1.src = 'images/apple.png';
+    Chart.defaults.elements.point.pointStyle=img1;
     const labels = [
-      'January',
-      'February',
-      'March',
-      'April',
-      'May',
-      'June',
+      'January1',
+      'February2',
+      'March3',
+      'April4',
+      'May5',
+      'June6',
     ];
-  
+
     const data = {
   datasets: [{
-    label: 'Odmiany jabłek',
+    label: 'Scatter Dataset',
     data: [{
       x: -10,
       y: 0
@@ -34,31 +36,26 @@
     backgroundColor: 'rgb(255, 99, 132)'
   }],
 };
-  
+
     const config = {
       type: 'scatter',
       data: data,
       options: {
     scales: {
-        y: {
-        title: {
-          color: 'blue',
-          display: true,
-          text: 'Kwaśne ------ Słodkie'}}
+       
       x: {
         title: {
           color: 'red',
           display: true,
-          text: 'Miękkie ------ Chrupkie'}
-    }}}};
+          text: 'Miękkie ------ Chrupkie'}},
+          y: {
+        title: {
+          color: 'blue',
+          display: true,
+          text: 'Kwaśne ------ Słodkie'}}
+}}};
   </script>
-<script>
-    const myChart = new Chart(
-      document.getElementById('myChart'),
-      config
-    );
-  </script>
-  
 
+  
 </body>
 </html>
