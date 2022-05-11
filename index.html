@@ -3,13 +3,12 @@
     <head>
         <style>
 h1 {
-  color:blueviolet;
+  color:blue;
 }
 div{
     max-width: 80%;
     max-height: 45%;
 }
-
 
         </style>>
       </head>
@@ -45,8 +44,9 @@ div{
 
     const data = {
   datasets: [{
-    label: 'Scatter Dataset',
+    label: 'Gatunki polskich jabłek',
     data: [{
+        label:labels[1],
       x: -1,
       y: 1
     }, {
@@ -132,7 +132,16 @@ div{
           display: true,
           text: 'Kwaśne ------ Słodkie'},
           }
-}};
+}
+   plugins: {
+            tooltip: {
+                callbacks: {
+    let label = context.dataset.label || '';
+label+=labels[];
+    }
+    }
+    }
+    };
   </script>
 
 <script>
