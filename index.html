@@ -46,7 +46,6 @@ div{
   datasets: [{
     label: 'Gatunki polskich jabłek',
     data: [{
-        label:labels[1],
       x: -1,
       y: 1
     }, {
@@ -135,9 +134,12 @@ div{
 }
    plugins: {
             tooltip: {
-                callbacks: {
-    let label = context.dataset.label || '';
-label+=labels[];
+    callbacks: {
+                    label: function(tooltipItem, data) {
+var indice = tooltipItem.dataIndex;
+                      let label1 = "1";
+                      let label2 = "b";
+                        return [label1, label2, labels[indice]];
     }
     }
     }
