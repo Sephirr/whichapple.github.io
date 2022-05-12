@@ -3,7 +3,7 @@
     <head>
         <style>
 h1 {
-  color:blue;
+  color:green;
 }
 div{
     max-width: 80%;
@@ -20,7 +20,7 @@ div{
     img1.src = 'images/apple.png';
     Chart.defaults.elements.point.pointStyle=img1;</script>
 <script>
-    const labels = [
+const labels = [
       'Antonówka',
       'Reneta Szara',
       'Lobo',
@@ -119,8 +119,6 @@ div{
           color: 'red',
           display: true,
           text: 'Miękkie ------ Chrupkie'},
-           
-          
     },},
           y: {
         position:'center',
@@ -131,7 +129,7 @@ div{
           display: true,
           text: 'Kwaśne ------ Słodkie'},
           }
-}
+}}
    plugins: {
             tooltip: {
     callbacks: {
@@ -143,8 +141,9 @@ var indice = tooltipItem.dataIndex;
     }
     }
     }
+    }
     };
-  </script>
+</script>
 
 <script>
     const myChart = new Chart(
