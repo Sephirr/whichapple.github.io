@@ -6,11 +6,6 @@
       h1 {
         color: black;
       }
-
-      div {
-        max-width: 10%;
-        max-height: 45%;
-      }
       
       html, body {
   width:  100%;
@@ -24,10 +19,8 @@
   <body>
     <h1>FUK U4</h1>
    
-    
-    <canvas id="myChart" width="1" height="1"></canvas>
-    myChart.width = window.innerWidth*60%
-myChart.height = window.innerHeight*80%
+    <div id="canvasdiv" style="margin: 5px; height: 80; width: 80%;">
+      <canvas id="myChart" style="border: 1px solid red;"></canvas></div>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
       const img1 = new Image(50, 50);
@@ -184,10 +177,10 @@ img2.src=urle[0];
      
    
     const ctx = document.getElementById('myChart');
-       myChart.width = window.innerWidth*60%
-myChart.height = window.innerHeight*80%
-          ctx.width = window.innerWidth*60%
-ctx.height = window.innerHeight*80%
+       myChart.width = window.innerWidth
+myChart.height = window.innerHeight
+          ctx.width = window.innerWidth
+ctx.height = window.innerHeight
       const myChart = new Chart(ctx, config);
     </script>
 
