@@ -21,8 +21,10 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
       const img1 = new Image(50, 50);
-const urle = ['images/antonowka.png', 'images/szara_reneta.png', 'images/lobo.png', 'images/ligol.png', 'images/golden_delicious.png']
+const urle = ['images/antonowka.png', 'images/szara_reneta.png', 'images/lobo.png', 'images/ligol.png', 'images/golden_delicious.png'];
       img1.src = 'images/apple.png';
+      const img2 = new Image(50, 50);
+img2.src=urle[0];
       Chart.defaults.elements.point.pointStyle = img1;
     </script>
     <script>
@@ -33,9 +35,7 @@ const urle = ['images/antonowka.png', 'images/szara_reneta.png', 'images/lobo.pn
           data: [{
             x: -1,
             y: 1,
-const img2 = new Image(50, 50);
-img2.src=urle[0];
-            pointStyle: img2;
+            pointStyle: img2
           }, {
             x: -3,
             y: 2
