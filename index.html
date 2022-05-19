@@ -19,7 +19,7 @@
   <body>
     <h1>FUK U4</h1>
    
-    <div id="canvasdiv" style="margin: 5px; height: 80; width: 80%;">
+    <div id="canvasdiv" style="margin: 5px; height: 80; width: 80;">
       <canvas id="myChart" style="border: 1px solid red;"></canvas></div>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
@@ -174,14 +174,12 @@ img2.src=urle[0];
       }
       }
       }
-     
-   
-    const ctx = document.getElementById('myChart');
-       myChart.width = window.innerWidth
-myChart.height = window.innerHeight
-          ctx.width = window.innerWidth
-ctx.height = window.innerHeight
+       const ctx = document.getElementById('myChart');
+       
       const myChart = new Chart(ctx, config);
+   myChart.width = 2;
+    myChart.height = 1;
+  
     </script>
 
   </body>
