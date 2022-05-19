@@ -8,7 +8,7 @@
       }
 
       div {
-        max-width: 80%;
+        max-width: 10%;
         max-height: 45%;
       }
 
@@ -17,7 +17,9 @@
 
   <body>
     <h1>FUK U4</h1>
-    <canvas id="myChart" width="80" height="80"></canvas>
+    <div>
+    
+    </div><canvas id="myChart" width="10%" height="80"></canvas>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
       const img1 = new Image(50, 50);
@@ -42,6 +44,8 @@ const urle = ['images/antonowka.png', 'images/szara_reneta.png', 'images/lobo.pn
       const img18 = new Image(50, 50);
       const img19 = new Image(50, 50);
       const img20 = new Image(50, 50);
+      const img21 = new Image(50, 50);
+      const img22 = new Image(50, 50);
 img2.src=urle[0];
       img3.src=urle[1];
       img4.src=urle[2];
@@ -172,6 +176,8 @@ img2.src=urle[0];
      
    
     const ctx = document.getElementById('myChart');
+    ctx.width = 25;
+ctx.height = 20;
       const myChart = new Chart(ctx, config);
     </script>
 
