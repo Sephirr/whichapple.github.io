@@ -12,15 +12,14 @@
   height: 100%;
   margin: 40px;
 }
-
     </style>
   </head>
 
   <body>
     <h1>FUK U4</h1>
    
-    <div id="canvasdiv" style="margin: 5px; height: 80; width: 80;">
-      <canvas id="myChart" style="border: 1px solid red;"></canvas></div>
+    
+      <canvas id="myChart" width="50%" height="50%" style="border: 1px solid black;"></canvas>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
       const img1 = new Image(50, 50);
@@ -174,11 +173,9 @@ img2.src=urle[0];
       }
       }
       }
-       const ctx = document.getElementById('myChart');
-       
+       const ctx = document.getElementById('myChart').getContext('2d');
       const myChart = new Chart(ctx, config);
-   myChart.width = 2;
-    myChart.height = 1;
+   
   
     </script>
 
