@@ -194,21 +194,26 @@ img2.src=urle[0];
       }},
       scales: {
       y: {
-           // the data minimum used for determining the ticks is Math.min(dataMin, suggestedMin)
+           
         suggestedMin: -5,
-
-        // the data maximum used for determining the ticks is Math.max(dataMax, suggestedMax)
         suggestedMax: 5,
+        type: 'category',
+        labels: ['Miękkie', '', '', '', '', '', '', '', '', 'Chrupkie'],
 },
       x: {
-           // the data minimum used for determining the ticks is Math.min(dataMin, suggestedMin)
         suggestedMin: -5,
-
-        // the data maximum used for determining the ticks is Math.max(dataMax, suggestedMax)
         suggestedMax: 5,
+        type: 'category',
+        labels: ['Kwaśne', '', '', '', '', 'Słodko-kwaśne', '', '', '', 'Słodkie'],
 }  
         
-       }
+       },
+       ticks: {
+           stepSize: 1,
+           suggestedMin: 0.5,
+           suggestedMax: 5.5,
+           
+         }
       }
       }
        const ctx = document.getElementById('myChart').getContext('2d');
