@@ -162,7 +162,7 @@ img2.src=urle[0];
         type: 'scatter',
         data: data,
         options: {
-        plugins:{
+        plugins: {
         tooltip: {
           callbacks: {
             label: function(tooltipItem, data) {
@@ -191,8 +191,24 @@ img2.src=urle[0];
               return [labels[indice]];
           }
         }
-      }
-      }
+      }},
+      scales: {
+      y: {
+           // the data minimum used for determining the ticks is Math.min(dataMin, suggestedMin)
+        suggestedMin: -5,
+
+        // the data maximum used for determining the ticks is Math.max(dataMax, suggestedMax)
+        suggestedMax: 5,
+},
+      x: {
+           // the data minimum used for determining the ticks is Math.min(dataMin, suggestedMin)
+        suggestedMin: -5,
+
+        // the data maximum used for determining the ticks is Math.max(dataMax, suggestedMax)
+        suggestedMax: 5,
+}  
+        
+       }
       }
       }
        const ctx = document.getElementById('myChart').getContext('2d');
