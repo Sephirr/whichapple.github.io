@@ -197,12 +197,24 @@ img2.src=urle[0];
            
         suggestedMin: -5,
         suggestedMax: 5,
-        labels: ['Miękkie', '', '', '', '', '', '', '', '', 'Chrupkie'],
+        ticks:{
+        callback: function (label, index, labels) {
+         if(label==-5){return "Miękkie";}
+         else if (label==5){return "Chrupkie";}
+
+         }
+        }
 },
       x: {
         suggestedMin: -5,
         suggestedMax: 5,
-        labels: ['Kwaśne', '', '', '', '', 'Słodko-kwaśne', '', '', '', 'Słodkie'],
+        ticks:{
+         callback: function (label, index, labels) {
+         if(label==-5){return "Kwaśne";}
+         else if (label==5){return "Słodkie";}
+
+         }
+        }
 }  
         
        },
