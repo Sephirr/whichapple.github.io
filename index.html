@@ -19,6 +19,19 @@
 .column2{
   float:left;
   width: 30%;
+  img {
+   width:50px;
+   height:50px;
+   -moz-transition-duration:2s;
+   -webkit-transition-duration:2s;
+   -o-transition-duration:2s;
+   -ms-transition-duration:2s;
+}
+
+img:hover {
+   width:75px;
+   height:75px;
+}
 }
 
 /* Clear floats after the columns */
@@ -193,6 +206,12 @@ img2.src=urle[0];
           }
         }
       }},
+          legend: {
+                display: true,
+                labels: {
+                    color: 'rgb(255, 99, 132)'
+                }
+            }
       scales: {
       y: {
            
