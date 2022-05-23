@@ -199,10 +199,13 @@ img2.src=urle[0];
         suggestedMin: -5,
         suggestedMax: 5,
         ticks:{
+        font: {
+                    size: 19,
+style:'bold',
+                },
         callback: function (label, index, labels) {
          if(label==-5){return "Miękkie";}
          else if (label==5){return "Chrupkie";}
-
          }
         }
 },
@@ -210,10 +213,12 @@ img2.src=urle[0];
         suggestedMin: -5,
         suggestedMax: 5,
         ticks:{
+       font: {
+                    size: 19,
+                },
          callback: function (label, index, labels) {
          if(label==-5){return "Kwaśne";}
          else if (label==5){return "Słodkie";}
-
          }
         }
 }  
