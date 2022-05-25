@@ -197,7 +197,7 @@ img2.src=urle[0];
       scales: {
       y: {
            
-        suggestedMin: -2.5,
+        suggestedMin: -3.5,
         suggestedMax: 5,
         ticks:{
         font: {
@@ -205,20 +205,20 @@ img2.src=urle[0];
 style:'bold',
                 },
         callback: function (label, index, labels) {
-         if(label==-2){return "Miękkie";}
+         if(label==-3.5){return "Miękkie";}
          else if (label==5){return "Chrupkie";}
          }
         }
 },
       x: {
-        suggestedMin: -2.5,
+        suggestedMin: -3.5,
         suggestedMax: 5,
         ticks:{
        font: {
                     size: 19,
                 },
          callback: function (label, index, labels) {
-         if(label==-2){return "Kwaśne";}
+         if(label==-3.5){return "Kwaśne";}
          else if (label==5){return "Słodkie";}
          }
         }
