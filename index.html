@@ -22,7 +22,7 @@ layout: default
 }
       canvas
       {
-        aspect-ratio: auto 900 / 900;
+        aspect-ratio: 1/1;
       }
 /* Clear floats after the columns */
 .row:after {
@@ -232,11 +232,9 @@ style:'bold',
       }
       Chart.defaults.elements.point.hitRadius=9;
        const ctx = document.getElementById('myChart').getContext('2d');
-      ctx.canvas.width  = window.innerWidth;
-  ctx.canvas.height = window.innerHeight;
+      ctx.canvas.width  = 800;
+  ctx.canvas.height = 800;
       const myChart = new Chart(ctx, config);
-   
-  
     </script>
 
   </body>
