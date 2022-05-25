@@ -15,7 +15,7 @@ layout: default
       html, body !important {
   width:  100%;
   height: 100%;
-  margin: 40px;
+  margin-left: 40px;
 }
  .column1 
 {
@@ -43,7 +43,7 @@ layout: default
     
    <div class = "column1">
   
-      <canvas id="myChart" width="50%" height="50%" style="border: 1px solid black;"></canvas> </div> <div class="column2">
+      <canvas id="myChart" width="50%" height="50%" style="border: 2px solid black;"></canvas> </div> <div class="column2">
       <p>
       </p>
       </div> </div>
@@ -165,6 +165,7 @@ img2.src=urle[0];
       };
 
       const config = {
+ 
         type: 'scatter',
         data: data,
         options: {
@@ -231,6 +232,7 @@ style:'bold',
        },
       }
       }
+      Chart.defaults.elements.point.hitRadius=1;
        const ctx = document.getElementById('myChart').getContext('2d');
       const myChart = new Chart(ctx, config);
    
