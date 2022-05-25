@@ -111,8 +111,8 @@ img2.src=urle[0];
             x: 3,
             y: -3
           }, {
-            x: 1.90,
-            y: -0.90
+            x: 1.85,
+            y: -1.15
           }, {
             x: 4,
             y: -2.5
@@ -133,7 +133,7 @@ img2.src=urle[0];
             y: 2
           }, {
             x: 2,
-            y: -0.5
+            y: -0.45
           }, {
             x: 1,
             y: 1
@@ -144,14 +144,14 @@ img2.src=urle[0];
             x: 0.6,
             y: 1.1
           }, {
-            x: 2.1,
-            y: -0.9
+            x: 2.15,
+            y: -0.85
           }, {
             x: -1,
             y: -0.5
           }, {
             x: 2,
-            y: -2
+            y: -2.1
           }, {
             x: 0,
             y: -2.5
@@ -197,7 +197,7 @@ img2.src=urle[0];
       scales: {
       y: {
            
-        suggestedMin: -3,
+        suggestedMin: -2,
         suggestedMax: 5,
         ticks:{
         font: {
@@ -205,20 +205,20 @@ img2.src=urle[0];
 style:'bold',
                 },
         callback: function (label, index, labels) {
-         if(label==-5){return "Miękkie";}
+         if(label==-2){return "Miękkie";}
          else if (label==5){return "Chrupkie";}
          }
         }
 },
       x: {
-        suggestedMin: -3,
+        suggestedMin: -2,
         suggestedMax: 5,
         ticks:{
        font: {
                     size: 19,
                 },
          callback: function (label, index, labels) {
-         if(label==-5){return "Kwaśne";}
+         if(label==-2){return "Kwaśne";}
          else if (label==5){return "Słodkie";}
          }
         }
