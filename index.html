@@ -17,12 +17,7 @@
   float:left;
   width: 30%;
 }
-      canvas
-      {
-        aspect-ratio: 1/1;
-        width:900px!important;
-        height:900px !important;
-      }
+      
 /* Clear floats after the columns */
 .row:after {
   content: "";
@@ -98,7 +93,7 @@ img2.src=urle[0];
         datasets: [{
           label: 'Gatunki polskich jabłek',
           pointStyle: [img2, img3, img4, img5, img6, img7, img8, img9, img10, img11, img12, img13, img14, img15, img16, img17, img18, img19, img20, img21, img22],
-          hitRadius: 2,
+          hitRadius: 3,
           data: [{
             x: -1,
             y: 1
@@ -229,10 +224,7 @@ style:'bold',
        },
       }
       }
-      Chart.defaults.elements.point.hitRadius=9;
        const ctx = document.getElementById('myChart').getContext('2d');
-      ctx.canvas.width  = 800;
-  ctx.canvas.height = 800;
       const myChart = new Chart(ctx, config);
     </script>
 
