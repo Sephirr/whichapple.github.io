@@ -37,7 +37,7 @@ layout: default
     
    <div class = "column1">
   
-      <canvas id="myChart" width="80%" height="80%" style="border: 2px solid black;"></canvas> </div> <div class="column2">
+      <canvas id="myChart" width="900" height="900" style="border: 2px solid black;"></canvas> </div> <div class="column2">
       <p>
       </p>
       </div> </div>
@@ -228,6 +228,8 @@ style:'bold',
       }
       Chart.defaults.elements.point.hitRadius=1;
        const ctx = document.getElementById('myChart').getContext('2d');
+      ctx.canvas.width  = window.innerWidth;
+  ctx.canvas.height = window.innerHeight;
       const myChart = new Chart(ctx, config);
    
   
