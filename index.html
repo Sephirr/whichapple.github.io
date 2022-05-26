@@ -186,6 +186,7 @@ img2.src=urle[0];
         type: 'scatter',
         data: data,
         options: {
+          responsive: true,
         plugins:{
         tooltip: {
           callbacks: {
@@ -221,10 +222,13 @@ img2.src=urle[0];
            
         suggestedMin: -4,
         suggestedMax: 5,
+        grid: {
+  color: "white"
+},
         ticks:{
+          color:'white',
         font: {
                     size: 19,
-          color:'white',
 style:'bold',
                 },
         callback: function (label, index, labels) {
@@ -236,10 +240,13 @@ style:'bold',
       x: {
         suggestedMin: -4,
         suggestedMax: 5,
+        grid: {
+  color: "white"
+},
         ticks:{
+          color:'white',
        font: {
                     size: 19,
-         color:'white',
                 },
          callback: function (label, index, labels) {
          if(label==-4){return "Kwaśne";}
