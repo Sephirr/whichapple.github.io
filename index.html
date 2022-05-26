@@ -38,6 +38,17 @@
   </head>
 
   <body bgcolor="beige">
+ <script> const plugin = {
+  id: 'custom_canvas_background_color',
+  beforeDraw: (chart) => {
+    const ctx = chart.canvas.getContext('2d');
+    ctx.save();
+    ctx.globalCompositeOperation = 'destination-over';
+    ctx.fillStyle = 'lightGreen';
+    ctx.fillRect(0, 0, chart.width, chart.height);
+    ctx.restore();
+  }
+  };</script>
     <h1>Gatunki polskich jabłek</h1>
    
     <div class ="row">
@@ -173,7 +184,7 @@ img2.src=urle[0];
         type: 'scatter',
         data: data,
         options: {
-        plugins: {
+        plugins: {plugins: [plugin],
         tooltip: {
           callbacks: {
             label: function(tooltipItem, data) {
@@ -238,6 +249,7 @@ style:'bold',
       }
        const ctx = document.getElementById('myChart').getContext('2d');
       const myChart = new Chart(ctx, config);
+      
     </script>
 
   </body>
