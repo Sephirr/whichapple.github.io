@@ -43,9 +43,12 @@
   display: table;
   clear: both;
 }
+     
       canvas{
       aspect-ratio: 1/1;
       }
+      
+      
     </style>
   </head>
 
@@ -58,14 +61,19 @@
    <div class = "column1">
   
       <canvas id="myChart" width="1600" height="1600" style="width:800px; height:800px;", border-radius=5px;><canvas> </div> 
+        
       <div class="column2">
+        
       <p>
         Data provided by Unia Owocowa - Polskie Stowarzyszenie Hodowców Owoców i Warzyw<br><br>
         <img src="images/unia.png" alt="unia owocowa" class="inline"/><br><br>
         API functionality by Michał Głowacki <br><br>
         Idea, implementation and data-viz by Szymon Borysowski
       </p>
-      </div> </div>
+        
+      </div>
+        </div>
+     
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
       const img1 = new Image(60, 60);
@@ -114,7 +122,9 @@ img2.src=urle[0];
        img20.src=urle[18];
        img21.src=urle[19];
        img22.src=urle[20];
+      
     </script>
+     
     <script>
 
       const data = {
@@ -179,9 +189,11 @@ img2.src=urle[0];
           }, {
             x: 0,
             y: -2.5
-          }],
+          }
+                ],
           backgroundColor: 'rgb(255, 99, 132)'
-        }],
+        }
+                  ],
       };
 
       const config = {
@@ -261,7 +273,8 @@ img2.src=urle[0];
               return [labels[indice]];
           }
         }
-      }},
+      }
+        },
       scales: {
       y: {
            
