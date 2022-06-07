@@ -1,326 +1,329 @@
 <!DOCTYPE html>
 <html>
 
-  <head>
-    <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
-    <style>
-      h1 {
-         font-family: 'Lato', sans-serif;
-        font-weight: 800;
-        color: white;
-      }
-      p{
+<head>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+  <style>
+    h1 {
       font-family: 'Lato', sans-serif;
-     color: white;
-      }
-      html, body {
-  padding-left: 2%;
-  padding-top:1%;
-        padding-right:2%;
-  background-color:#121212;
-}
- .column1 
-{
-  float: left;
-  width: 65%;
-  border: 4px solid white;
-   border-radius: 5px;
-  padding:2%;
-  background-color:#505050;
-}
-.column2{
-  float:right;
-  width: 25%;
-  border: 4px solid white;
-  border-radius: 5px;
-  padding:2%;
-  background-color:#505050;
-}
-      
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-     
-      canvas{
-      aspect-ratio: 1/1;
-      }
-      
-      
-    </style>
-  </head>
+      font-weight: 800;
+      color: white;
+    }
 
-  <body bgcolor="#121212">
- 
-    <h1>Gatunki polskich jabłek</h1>
-   
-    <div class ="row">
-    
-   <div class = "column1">
-  
-      <canvas id="myChart" width="1600" height="1600" style="width:800px; height:800px;", border-radius=5px;><canvas> </div> 
-        
-      <div class="column2">
-        
+    p {
+      font-family: 'Lato', sans-serif;
+      color: white;
+    }
+
+    html,
+    body {
+      padding-left: 2%;
+      padding-top: 1%;
+      padding-right: 2%;
+      background-color: #121212;
+    }
+
+    .column1 {
+      float: left;
+      width: 65%;
+      border: 4px solid white;
+      border-radius: 5px;
+      padding: 2%;
+      background-color: #505050;
+    }
+
+    .column2 {
+      float: right;
+      width: 25%;
+      border: 4px solid white;
+      border-radius: 5px;
+      padding: 2%;
+      background-color: #505050;
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    canvas {
+      aspect-ratio: 1/1;
+    }
+  </style>
+</head>
+
+<body bgcolor="#121212">
+
+  <h1>Gatunki polskich jabłek</h1>
+
+  <div class="row">
+
+    <div class="column1">
+
+      <canvas id="myChart" width="1600" height="1600" style="width:800px; height:800px;" , border-radius=5px;><canvas>
+    </div>
+
+    <div class="column2">
+
       <p>
         Data provided by Unia Owocowa - Polskie Stowarzyszenie Hodowców Owoców i Warzyw<br><br>
-        <img src="images/unia.png" alt="unia owocowa" class="inline"/><br><br>
+        <img src="images/unia.png" alt="unia owocowa" class="inline" /><br><br>
         API functionality by Michał Głowacki <br><br>
         Idea, implementation and data-viz by Szymon Borysowski
       </p>
-        
-      </div>
-        </div>
-     
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script>
-      const img1 = new Image(60, 60);
-const urle = ['images/antonowka.png', 'images/szara_reneta.png', 'images/lobo.png', 'images/ligol.png', 'images/golden_delicious.png','images/gala.png','images/idared.png','images/papierowka.png','images/gloster.png','images/jonagold.png','images/szampion.png','images/granny_smith.png','images/cortland.png','images/jonatan.png','images/red_prince.png', 'images/red_delicious.png','images/alwa.png','images/elize.png','images/pinova.png',];
-      img1.src = 'images/apple.png';
-      const img2 = new Image(80, 80);
-      const img3 = new Image(80, 80);
-      const img4 = new Image(80, 80);
-      const img5 = new Image(80, 80);
-      const img6 = new Image(80, 80);
-      const img7 = new Image(80, 80);
-      const img8 = new Image(80, 80);
-      const img9 = new Image(80, 80);
-      const img10 = new Image(80, 80);
-      const img11 = new Image(80, 80);
-      const img12 = new Image(80, 80);
-      const img13 = new Image(80, 80);
-      const img14 = new Image(80, 80);
-      const img15 = new Image(80, 80);
-      const img16 = new Image(80, 80);
-      const img17 = new Image(80, 80);
-      const img18 = new Image(80, 80);
-      const img19 = new Image(80, 80);
-      const img20 = new Image(80, 80);
-      const img21 = new Image(80, 80);
-      const img22 = new Image(80, 80);
 
-img2.src=urle[0];
-      img3.src=urle[1];
-      img4.src=urle[2];
-      img5.src=urle[3];
-      img6.src=urle[4];
-      img7.src=urle[5];
-       img8.src=urle[6];
-       img9.src=urle[7];
-       img10.src=urle[8];
-       img11.src=urle[9];
-       img12.src=urle[10];
-       img13.src=urle[11];
-       img14.src=urle[12];
-       img15.src=urle[13];
-       img16.src=urle[14];
-       img17.src=urle[15];
-       img18.src=urle[16];
-       img19.src=urle[17];
-       img20.src=urle[18];
-       img21.src=urle[19];
-       img22.src=urle[20];
-      
-    </script>
-     
-    <script>
+    </div>
+  </div>
 
-      const data = {
-        datasets: [{
-          label: 'Gatunki polskich jabłek',
-          pointStyle: [img2, img3, img4, img5, img6, img7, img8, img9, img10, img11, img12, img13, img14, img15, img16, img17, img18, img19, img20, img21, img22],
-          hitRadius: 28,
-          data: [{
-            x: -1,
-            y: 1
-          }, {
-            x: -3,
-            y: 2
-          }, {
-            x: 0.5,
-            y: 2.5
-          }, {
-            x: 3,
-            y: -3
-          }, {
-            x: 1.85,
-            y: -1.15
-          }, {
-            x: 4,
-            y: -2.5
-          }, {
-            x: -2,
-            y: 0
-          }, {
-            x: -2,
-            y: 4
-          }, {
-            x: -1,
-            y: -2
-          }, {
-            x: 0.5,
-            y: 1
-          }, {
-            x: 2,
-            y: 2
-          }, {
-            x: 2,
-            y: -0.
-          }, {
-            x: 1,
-            y: 1
-          }, {
-            x: 2.1,
-            y: -0.8
-          }, {
-            x: 0.65,
-            y: 1.2
-          }, {
-            x: 2.24,
-            y: -1.05
-          }, {
-            x: -1,
-            y: -0.5
-          }, {
-            x: 2,
-            y: -2.1
-          }, {
-            x: 0,
-            y: -2.5
-          }
-                ],
-          backgroundColor: 'rgb(255, 99, 132)'
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    const img1 = new Image(60, 60);
+    const urle = ['images/antonowka.png', 'images/szara_reneta.png', 'images/lobo.png', 'images/ligol.png', 'images/golden_delicious.png', 'images/gala.png', 'images/idared.png', 'images/papierowka.png', 'images/gloster.png', 'images/jonagold.png', 'images/szampion.png', 'images/granny_smith.png', 'images/cortland.png', 'images/jonatan.png', 'images/red_prince.png', 'images/red_delicious.png', 'images/alwa.png', 'images/elize.png', 'images/pinova.png',];
+    img1.src = 'images/apple.png';
+    const img2 = new Image(80, 80);
+    const img3 = new Image(80, 80);
+    const img4 = new Image(80, 80);
+    const img5 = new Image(80, 80);
+    const img6 = new Image(80, 80);
+    const img7 = new Image(80, 80);
+    const img8 = new Image(80, 80);
+    const img9 = new Image(80, 80);
+    const img10 = new Image(80, 80);
+    const img11 = new Image(80, 80);
+    const img12 = new Image(80, 80);
+    const img13 = new Image(80, 80);
+    const img14 = new Image(80, 80);
+    const img15 = new Image(80, 80);
+    const img16 = new Image(80, 80);
+    const img17 = new Image(80, 80);
+    const img18 = new Image(80, 80);
+    const img19 = new Image(80, 80);
+    const img20 = new Image(80, 80);
+    const img21 = new Image(80, 80);
+    const img22 = new Image(80, 80);
+
+    img2.src = urle[0];
+    img3.src = urle[1];
+    img4.src = urle[2];
+    img5.src = urle[3];
+    img6.src = urle[4];
+    img7.src = urle[5];
+    img8.src = urle[6];
+    img9.src = urle[7];
+    img10.src = urle[8];
+    img11.src = urle[9];
+    img12.src = urle[10];
+    img13.src = urle[11];
+    img14.src = urle[12];
+    img15.src = urle[13];
+    img16.src = urle[14];
+    img17.src = urle[15];
+    img18.src = urle[16];
+    img19.src = urle[17];
+    img20.src = urle[18];
+    img21.src = urle[19];
+    img22.src = urle[20];
+
+  </script>
+
+  <script>
+
+    const data = {
+      datasets: [{
+        label: 'Gatunki polskich jabłek',
+        pointStyle: [img2, img3, img4, img5, img6, img7, img8, img9, img10, img11, img12, img13, img14, img15, img16, img17, img18, img19, img20, img21, img22],
+        hitRadius: 28,
+        data: [{
+          x: -1,
+          y: 1
+        }, {
+          x: -3,
+          y: 2
+        }, {
+          x: 0.5,
+          y: 2.5
+        }, {
+          x: 3,
+          y: -3
+        }, {
+          x: 1.85,
+          y: -1.15
+        }, {
+          x: 4,
+          y: -2.5
+        }, {
+          x: -2,
+          y: 0
+        }, {
+          x: -2,
+          y: 4
+        }, {
+          x: -1,
+          y: -2
+        }, {
+          x: 0.5,
+          y: 1
+        }, {
+          x: 2,
+          y: 2
+        }, {
+          x: 2,
+          y: -0.
+        }, {
+          x: 1,
+          y: 1
+        }, {
+          x: 2.1,
+          y: -0.8
+        }, {
+          x: 0.65,
+          y: 1.2
+        }, {
+          x: 2.24,
+          y: -1.05
+        }, {
+          x: -1,
+          y: -0.5
+        }, {
+          x: 2,
+          y: -2.1
+        }, {
+          x: 0,
+          y: -2.5
         }
-                  ],
-      };
+        ],
+        backgroundColor: 'rgb(255, 99, 132)'
+      }
+      ],
+    };
 
-      const config = {
- 
-        type: 'scatter',
-        data: data,
-        options: {
-          responsive: true,
-        plugins:{
-          legend:{
-          display:false
-        },
-       
-        tooltip: {
-          callbacks: {
-            label: function(tooltipItem, data) {
-            var labels = [
-        `Antonówka
+    const config = {
+
+      type: 'scatter',
+      data: data,
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            display: false
+          },
+
+          tooltip: {
+            callbacks: {
+              label: function (tooltipItem, data) {
+                var labels = [
+                  `Antonówka
          Skórka gładka, błyszcząca
          Miąższ jasny, soczysty`,
-        `Reneta Szara
+                  `Reneta Szara
          Skórka pokryta szarawym, chropowatym nalotem
          Miąższ winny, o korzennym aromacie`,
-        `Lobo
+                  `Lobo
          Skórka gładka, błyszcząca
          Miąższ zielonkawokremowy, kruchy, bardzo soczysty`,
-        `Ligol
+                  `Ligol
          Skórka mocna, gładka i błyszcząca
          Miąższ kremowy, soczysty, jędrny, aromatyczny`,
-        `Golden Delicious
+                  `Golden Delicious
          Skórka lekko błyszcząca, zielonkawożółta lub żółta
          Miąższ soczysty, kruchy, winno-słodki`,
-        `Gala
+                  `Gala
          Żebrowanie przy kielichu, skórka pokryta marmurkowym rumieńcem
          Miąższ kremowożółty, soczysty, chrupki`,
-        `Idared
+                  `Idared
          Skórka owocu jest mocna, gruba i błyszcząca
          Miąższ biały, lekko kremowy, drobnoziarnisty, soczysty`,
-        `Papierówka
+                  `Papierówka
          Skórka cienka, gładka, sucha
          Miąższ bardzo delikatny, zielonkawobiały`,
-        `Gloster
+                  `Gloster
          Skórka lekko błyszcząca, zielonkawożółta z rozległym rumieńcem
          Miąższ średnioziarnisty, kruchy, białokremowy`,
-        `Jonagold \n
+                  `Jonagold \n
          Skórka średniej grubości \n
          Miąższ żółty, gruboziarnisty, ścisły, soczysty`,
-        `Szampion
+                  `Szampion
          Skórka gładka, zielonkawożółta, pokryta rozmyto-paskowanym rumieńcem
          Miąższ soczysty, aromatyczny`,
-        `Granny Smith
+                  `Granny Smith
          Skórka gładka, tłustawa i lśniąca
          Miąższ zielonkawobiały, soczysty i jędrny`,
-        `Cortland
+                  `Cortland
          Skórka cienka, o karminowym rumieńcu
          Miąższ biały, drobnoziarnisty, kruchy`,
-        `Jonatan
+                  `Jonatan
          Skórka mocna, błyszcząca, ze smużkowatym rumieńcem
          Miąższ kremowo-biały, aromatyczny, ścisły`,
-        `Red Prince
+                  `Red Prince
          Skórka błyszcząca, mocna, w 95% pokryta bordowym rumieńcem
          Miąższ kremowożółty, ścisły i twardy`,
-        `Red Delicious
+                  `Red Delicious
          Skórka intensywnie bordowa, błyszcząca
          Miąższ chrupiący, soczysty`,
-        `Alwa
+                  `Alwa
          Skórka zielonkawożółta z dużym czerwonym rumieńcem
          Miąższ chrupki, soczysty`,
-        `Elize
+                  `Elize
          Skórka gładka, sucha
          Miąższ białozielony, soczysty, aromatyczny`,
-        `Pinova
+                  `Pinova
          Skórka sucha, zielonożółta, ok. 75% rumieńca
          Miąższ średnio zwarty, żółtawy`
-      ];
-              var indice = tooltipItem.dataIndex;
-              return [labels[indice]];
+                ];
+                var indice = tooltipItem.dataIndex;
+                return [labels[indice]];
+              }
+            }
           }
-        }
-      }
         },
-      scales: {
-      y: {
-           
-        suggestedMin: -4,
-        suggestedMax: 5,
-        grid: {
-  color: "white"
-},
-        ticks:{
-          color:'white',
-        font: {
-                    size: 19,
-style:'bold',
-                },
-        callback: function (label, index, labels) {
-         if(label==-4){return "Miękkie";}
-         else if (label==5){return "Chrupkie";}
-         }
-        }
-},
-      x: {
-        suggestedMin: -4,
-        suggestedMax: 5,
-        grid: {
-  color: "white"
-},
-        ticks:{
-          color:'white',
-       font: {
-                    size: 19,
-                },
-         callback: function (label, index, labels) {
-         if(label==-4){return "Kwaśne";}
-         else if (label==5){return "Słodkie";}
-         }
-        }
-}  
-        
-       },
-      }
-      }
-       const ctx = document.getElementById('myChart').getContext('2d');
-      const myChart = new Chart(ctx, config);
-      
-    </script>
+        scales: {
+          y: {
 
-  </body>
+            suggestedMin: -4,
+            suggestedMax: 5,
+            grid: {
+              color: "white"
+            },
+            ticks: {
+              color: 'white',
+              font: {
+                size: 19,
+                style: 'bold',
+              },
+              callback: function (label, index, labels) {
+                if (label == -4) { return "Miękkie"; }
+                else if (label == 5) { return "Chrupkie"; }
+              }
+            }
+          },
+          x: {
+            suggestedMin: -4,
+            suggestedMax: 5,
+            grid: {
+              color: "white"
+            },
+            ticks: {
+              color: 'white',
+              font: {
+                size: 19,
+              },
+              callback: function (label, index, labels) {
+                if (label == -4) { return "Kwaśne"; }
+                else if (label == 5) { return "Słodkie"; }
+              }
+            }
+          }
+
+        },
+      }
+    }
+    const ctx = document.getElementById('myChart').getContext('2d');
+    const myChart = new Chart(ctx, config);
+
+  </script>
+
+</body>
 
 </html>
